@@ -12,7 +12,7 @@ int count_nodes(const binary_tree_t *tree)
 		return (0);
 	if (tree->right == NULL && tree->left == NULL)
 		return (1);
-	if (count_nodes(tree->right) < count_nodes(tree->left))
+	if (count_nodes(tree->left) < count_nodes(tree->right))
 		return (count_nodes(tree->left) + 1);
 	else
 		return (count_nodes(tree->right) + 1);
